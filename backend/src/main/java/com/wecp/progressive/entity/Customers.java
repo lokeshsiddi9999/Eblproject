@@ -2,7 +2,7 @@ package com.wecp.progressive.entity;
 
 
 
-public class Customers {
+public class Customers implements Comparable<Customers> {
 
     private int customerId;
     private String name;
@@ -71,4 +71,10 @@ public class Customers {
         this.role = role;
     }
 
+    @Override
+    public int compareTo(Customers customer) {
+        return this.getName().compareTo(customer.getName());
+       
+    }
+    
 }
